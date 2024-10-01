@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnosis Form dan Form Pernyataan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .custom-checkbox {
+            position: relative;
+            width: 24px;
+            height: 24px;
+            background-color: #f0f0f0;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+
+        .custom-checkbox:checked {
+            background-color: #38a169;
+        }
+
+        .custom-checkbox:checked::after {
+            content: '✓';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 16px;
+            color: white;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .pernyataan-container {
+            width: 70%;
+            margin: 20px auto;
+            border: 1px solid #000;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .pernyataan-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .pernyataan-table td {
+            padding: 5px;
+            vertical-align: top;
+        }
+
+        .signature-table td {
+            border-top: 1px solid #000;
+            text-align: center;
+        }
+
+        .field-label {
+            width: 20%;
+        }
+
+        .field-input {
+            width: 80%;
+            border-bottom: 1px dotted #000;
+        }
+
+        .note {
+            font-size: 12px;
+            margin-top: 10px;
+        }
+    </style>
+
+</head>
+<body class="bg-gray-100">
+<div class="pernyataan-container mx-auto mt-8">
+    
+    <h2 class="text-2xl text-center font-bold mb-8">INFORNED CONSENT TINDAKAN MEDIS</h2>
+        <form>
+            <div class="grid grid-cols-3 gap-4 mb-4">
+                <div class="col-span-2">
+                    <h5 class="text-lg font-reguler">DOKTER :</h5>
+                    <h5 class="text-lg font-reguler">PEMBERI INFORMASI :</h5>
+                    <h5 class="text-lg font-reguler">PENERIMA INFORMASI/PEMBERI PERSETUJUAN :</h5>
+                    <h4 class="text-lg font-semibold">JENIS INFORMASI</h4>
+                </div>
+                <div class="text-center mt-20">
+                    <h4 class="text-lg font-semibold">PARAF (✓)</h4>
+                </div>
+            </div>
+
+            <!-- Form Group 1 -->
+            <div class="grid grid-cols-3 gap-4 mb-4">
+                <div class="col-span-2">
+                    <label for="diagnosis" class="block font-medium text-gray-700">1. DIAGNOSIS (DK & DD)</label>
+                    <textarea class="form-control w-full p-2 border rounded-md" id="diagnosis" name="diagnosis" rows="3"></textarea>
+                </div>
+                <div class="flex justify-center items-center">
+                    <input type="checkbox" class="custom-checkbox">
+                </div>
+            </div>
+
+            <!-- Form Group 2 -->
+            <div class="grid grid-cols-3 gap-4 mb-4">
+                <div class="col-span-2">
+                    <label for="dasarDiagnosis" class="block font-medium text-gray-700">2. DASAR DIAGNOSIS</label>
+                    <textarea class="form-control w-full p-2 border rounded-md" id="dasarDiagnosis" name="dasarDiagnosis" rows="3"></textarea>
+                </div>
+                <div class="flex justify-center items-center">
+                    <input type="checkbox" class="custom-checkbox">
+                </div>
+            </div>
+
+            <!-- Form Group 3 -->
+            <div class="grid grid-cols-3 gap-4 mb-4">
+                <div class="col-span-2">
+                    <label for="tindakanMedis" class="block font-medium text-gray-700">3. TINDAKAN MEDIS</label>
+                    <textarea class="form-control w-full p-2 border rounded-md" id="tindakanMedis" name="tindakanMedis" rows="3"></textarea>
+                </div>
+                <div class="flex justify-center items-center">
+                    <input type="checkbox" class="custom-checkbox">
+                </div>
+            </div>
+
+            <!-- Form Group 4 -->
+            <div class="grid grid-cols-3 gap-4 mb-4">
+                <div class="col-span-2">
+                    <label for="indikasiTindakan" class="block font-medium text-gray-700">4. INDIKASI TINDAKAN</label>
+                    <textarea class="form-control w-full p-2 border rounded-md" id="indikasiTindakan" name="indikasiTindakan" rows="3"></textarea>
+                </div>
+                <div class="flex justify-center items-center">
+                    <input type="checkbox" class="custom-checkbox">
+                </div>
+            </div>
+
+            <!-- Form Group 5 -->
+            <div class="grid grid-cols-3 gap-4 mb-4">
+                <div class="col-span-2">
+                    <label for="tataCaraTindakan" class="block font-medium text-gray-700">5. TATA CARA TINDAKAN</label>
+                    <textarea class="form-control w-full p-2 border rounded-md" id="tataCaraTindakan" name="tataCaraTindakan" rows="3"></textarea>
+                </div>
+                <div class="flex justify-center items-center">
+                    <input type="checkbox" class="custom-checkbox">
+                </div>
+            </div>
+
+            <!-- Form Group 6 -->
+            <div class="grid grid-cols-3 gap-4 mb-4">
+                <div class="col-span-2">
+                    <label for="tujuan" class="block font-medium text-gray-700">6. TUJUAN</label>
+                    <textarea class="form-control w-full p-2 border rounded-md" id="tujuan" name="tujuan" rows="3"></textarea>
+                </div>
+                <div class="flex justify-center items-center">
+                    <input type="checkbox" class="custom-checkbox">
+                </div>
+            </div>
+
+            <!-- Form Group 7 -->
+            <div class="grid grid-cols-3 gap-4 mb-4">
+                <div class="col-span-2">
+                    <label for="resiko" class="block font-medium text-gray-700">7. RESIKO</label>
+                    <textarea class="form-control w-full p-2 border rounded-md" id="resiko" name="resiko" rows="3"></textarea>
+                </div>
+                <div class="flex justify-center items-center">
+                    <input type="checkbox" class="custom-checkbox">
+                </div>
+            </div>
+
+            <!-- Form Group 8 -->
+            <div class="grid grid-cols-3 gap-4 mb-4">
+                <div class="col-span-2">
+                    <label for="komplikasi" class="block font-medium text-gray-700">8. KOMPLIKASI</label>
+                    <textarea class="form-control w-full p-2 border rounded-md" id="komplikasi" name="komplikasi" rows="3"></textarea>
+                </div>
+                <div class="flex justify-center items-center">
+                    <input type="checkbox" class="custom-checkbox">
+                </div>
+            </div>
+
+            <!-- Form Group 9 -->
+            <div class="grid grid-cols-3 gap-4 mb-4">
+                <div class="col-span-2">
+                    <label for="prognosis" class="block font-medium text-gray-700">9. PROGNOSIS</label>
+                    <textarea class="form-control w-full p-2 border rounded-md" id="prognosis" name="prognosis" rows="3"></textarea>
+                </div>
+                <div class="flex justify-center items-center">
+                    <input type="checkbox" class="custom-checkbox">
+                </div>
+            </div>
+
+            <!-- Form Group 10 -->
+            <div class="grid grid-cols-3 gap-4 mb-4">
+                <div class="col-span-2">
+                    <label for="lainLain" class="block font-medium text-gray-700">10. LAIN - LAIN</label>
+                    <textarea class="form-control w-full p-2 border rounded-md" id="lainLain" name="lainLain" rows="3"></textarea>
+                </div>
+                <div class="flex justify-center items-center">
+                    <input type="checkbox" class="custom-checkbox">
+                </div>
+            </div>
+                
+
+    <!-- Form Pernyataan -->
+    
+    <table class="table-content">
+        <tr>
+            <td class="h-full">
+                    Dengan ini menyatakan bahwa saya telah menerangkan hal-hal di atas secara benar dan jelas serta
+                    memberikan kesempatan untuk bertanya dan atau berdiskusi
+            </td>
+            <td class="h-full" style="text-align: center;">
+              (Pemberi Informasi)
+            </td>
+         </tr>
+
+         <tr>
+            <td>
+                Dengan ini menyatakan bahwa saya telah menerima informasi sebagaimana di atas yang telah saya 
+                beri tanda centang ( V ) atau paraf di sebelah kananya dan telah memahami informasi terbaru
+            </td>
+            <td class="h-full" style="text-align: center;">
+              (Pemberi Informasi)
+            </td>
+         </tr>
+    </table>
+
+        <p>Saya bertanda tangan di bawah ini :</p>
+        <table class="pernyataan-table">
+            <tr>
+                <td class="field-label">Nama</td>
+                <td class="field-input">..........................................................................</td>
+            </tr>
+            <tr>
+                <td class="field-label">Umur / Kelamin</td>
+                <td class="field-input">.......... Tahun/Bulan/Hari&nbsp;&nbsp;&nbsp; L / P ..........</td>
+            </tr>
+            <tr>
+                <td class="field-label">Alamat</td>
+                <td class="field-input">..........................................................................</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    Menyatakan dengan sesungguhnya dari saya sendiri/* sebagai orang tua/* keluarga /* wali dari :
+                </td>
+            </tr>
+            <tr>
+                <td class="field-label">Nama</td>
+                <td class="field-input">..........................................................................</td>
+            </tr>
+            <tr>
+                <td class="field-label">Umur / Kelamin</td>
+                <td class="field-input">.......... Tahun/Bulan/Hari&nbsp;&nbsp;&nbsp; L / P ..........</td>
+            </tr>
+            <tr>
+                <td class="field-label">Alamat</td>
+                <td class="field-input">..........................................................................</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    Dengan ini menyatakan Setuju / menolak untuk dilakukan tindakan medis ...................
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    Dari penjelasan yang diberikan, telah saya mengerti segala hal yang berhubungan dengan penyakit tersebut, serta tindakan medis yang akan dilakukan dan kemungkinan pasca tindakan yang dapat terjadi sesuai penjelasan yang diberikan:
+                </td>
+            </tr>
+        </table>
+
+        <p>Songgon, ..................................</p>
+
+        <table class="text-align: center;">
+            <tr>
+                <td>Saksi - saksi</td>
+                <td>Dokter</td>
+                <td>Yang membuat pernyataan</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>................................................................</td>
+                <td>................................................................</td>
+                <td>.................................................................</td>
+            </tr>
+            <tr>
+                <td>Tanda tangan & Nama Terang</td>
+                <td>Tanda tangan & Nama Terang</td>
+                <td>Tanda tangan & Nama Terang</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>........................................................................</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Tanda tangan & Nama Terang</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+
+        <p class="note">* coret yang tidak perlu</p>
+    </form>
+</div>
+</body>
+</html>
